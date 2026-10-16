@@ -1,3 +1,5 @@
+import sys
+
 # Greet Customer & Ask Name
 print("Hello, Welcome to Han Coffee!")
 name = input("What is your name?\n" + "> ")
@@ -11,7 +13,7 @@ if name == "Ben" or name == "Petricia":
             print("Your good deeds saved you. Welcome!!")
         else:
             print("You're not welcome here, Get Out!!")
-            exit()
+            sys.exit()
     if evil_status == "no":
         print("Oh, you're not evil " + name + ". Welcome!")
 else:
@@ -35,7 +37,7 @@ elif order == "Frappuccino":
     price = 12
 else:
     print("We don't have that on the menu. Please choose from the menu.")
-    exit()
+    sys.exit()
 
 # Ask for Quantity & Calculate Total
 quantity = input("How many " + order + " would you like?\n" + "> ")
@@ -53,5 +55,3 @@ print(
 )
 
 print("\nThank you, your total is: $" + str(total))
-
-print("test")
